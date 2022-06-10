@@ -60,10 +60,51 @@ public class Expressions {
 
         // It laso works with variables:
         result = operand1 - operand2;  // result now equals -2
-        System.out.print(result);
+
+        // It works with a combination of literals and variables:
+        result = 15 - operand1;  // result now equals 10
+
+        // You can chain subtraction operators together:
+        // result now equals 0
+        result = 19 - operand1 - operand2 - operand3;
+
+        // Finally, the -= operator is used to add a value to a
+        // variable. result -= operand1 is equivalent to
+        // result = result - operand1.
+        // NOTE: the initial value of result is used to calculate the
+        //       new value of result:
+        result = 2;  // set reult to 2
+        result -= 4;  // result is now equal to -2 (2-4)
+        result -= operand1;   // result is now equal to -7 (-2 - 5)
+
 
         //
+        // Multiplication
         //
-        //
+        // Multiplication is a binary infix operator.  It works with
+        // literals:
+        result = 2 * 3;  //result is now 6
+
+        // It also works with variables:
+        result = operand1 * operand2;
+
+        // It works with a combination of literals and variables:
+        result = 2 * operand1;
+
+        // You can chain multiplication operators together:
+        // result now equals 490
+        result = 2 * operand1 * operand2 * operand3;
+
+        // Finally, the *= operator is used to add a value to a
+        // variable. result *= operand1 is equivalent to
+        // result = result * operand1.
+        // NOTE: the initial value of result is used to calculate the
+        //       new value of result:
+        result = 2;  // set result to 2
+        result *= 4;  // result is now equal to 8 (2 * 4)
+        result *= operand1;  // result is now equal to 40 (8 * 5)
+
+
+        System.out.print(result);
     }
 }
