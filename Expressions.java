@@ -138,7 +138,6 @@ public class Expressions {
         result /= 4;  // result is now equal to 10 (40 / 4)
         result /= operand1;  // result is now equal to 2 (10 / 5)
 
-
         System.out.print(result);
     }
 }
