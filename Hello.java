@@ -19,4 +19,7 @@ public class Hello {
         System.out.println(counter);
         System.out.println(isDone);
     }
+
+    public static class Scanner {
+    }
 }
