@@ -14,13 +14,14 @@ public class LazyTeenager {
                 System.out.println("Clean your room!! That's IT, I'm doing it!!! YOU'RE GROUNDED AND I'M TAKING YOUR XBOX!");
                 break;
             }
-            cleanRoom = false;
             System.out.println("Clean your room!! (x"+counter+")");
+            cleanRoom = randomizer.nextFloat() <= probability;
             probability += 0.1f;
-            counter += 1;
+            counter = counter + 1;
+            if (cleanRoom == true) {
+                System.out.println("FINE! I'LL CLEAN MY ROOM. BUT I REFUSE TO EAT MY PEAS.");
+            }
+        } while(cleanRoom==false);
 
-        } while(cleanRoom==true);
-        System.out.println("FINE! I'LL CLEAN MY ROOM. BUT I REFUSE TO EAT MY PEAS.");
     }
 }
-// randomizer.nextFloat() <= probability
