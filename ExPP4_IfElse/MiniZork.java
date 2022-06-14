@@ -45,14 +45,58 @@ public class MiniZork {
           // In the house
         } else if (action.equals("go to the house")) {
             System.out.println("You are standing in a living room of the house.");
-            System.out.println("With a nice TV, a sofa, and a security path to a mystery place.");
+            System.out.println("With a nice TV, a sofa, and a doubtful door.");
             System.out.println("You take a nap on the sofa.");
             System.out.println("You hear a weird noise");
-            System.out.print("Ignore it, or enter the security path?");
+            System.out.print("ignore it, or open the doubtful door?");
 
             action = userInput.nextLine();
-            if (action.equals("Ignore it")) {
-                System.out.println(" ");
+            if (action.equals("ignore it")) {
+                System.out.println("The noise come closer.");
+                System.out.println("You feel scared.");
+                // choice
+                System.out.print("still ignore it, or open your eyes?");
+
+                action = userInput.nextLine();
+                if (action.equals("still ignore it")) {
+                    System.out.println("You are no awareness of dangerous.");
+                    System.out.println("You feel being pulled out of your bed.");
+                    System.out.println("You've been eaten by a grue.");
+                } else if (action.equals("open your eyes")) {
+                    System.out.println("You see the monster close to you.");
+                    System.out.println("You run away from your sofa to the field");
+                    System.out.println("You run away screaming across the house - looking very foolish");
+                    System.out.println("But you alive. Possibly a wise choice.");
+                }
+            } else if (action.equals("open the doubtful door")) {
+                System.out.println("You saw a tunnel, seems going to somewhere.");
+                System.out.println("You are passing through the tunnel.");
+                System.out.println("You heard a voice coming behind you.");
+                System.out.print("You keep running");
+
+                // in Doctor Strange's centre
+                System.out.println("You saw a beautiful, historical and mystery place");
+                System.out.println("It seems a magical place.");
+                System.out.println("Suddenly, you saw Doctor Strange.");
+                System.out.println("He asked where are you from.");
+                System.out.print("tell him the truth, or being evasive?");
+
+                // choice
+                action = userInput.nextLine();
+                if (action.equals("tell him the truth")) {
+                    System.out.println("Doctor Strange know all the details.");
+                    System.out.println("He prepared well for the monster.");
+                    System.out.println("He also hide you in a safe place.");
+                    System.out.println("When the grue come, he kills the grue in a second.");
+                    System.out.println("You thanks for his help.");
+                    System.out.println("He sent you back to your house.");
+                    System.out.println("You are alive, and have a good sleep.");
+                } else if (action.equals("being evasive")) {
+                    System.out.println("Doctor Strange not trust you.");
+                    System.out.println("He want to send you back.");
+                    System.out.println("When making the spell, a grue rush into the centre.");
+                    System.out.println("It skills all of you.");
+                }
             }
         }
     }
