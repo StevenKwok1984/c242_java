@@ -7,9 +7,11 @@ public class GuessMeMore {
     public static void main(String[] args) {
         // saving an answer from -100 to 100
         Random randomizer = new Random();
-        int answer = randomizer.nextInt(200) - 100;
+        int answer = randomizer.nextInt(201) - 100;
         // prepare to guess
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("Random Answer: " + answer);
 
         // Start guessing
         System.out.println("I've chosen a number between -100 and 100. Bet you can't guess it!");
@@ -18,8 +20,9 @@ public class GuessMeMore {
         int guess = Integer.parseInt(stringGuess);
         System.out.println();
 
+
         // loop if not correct
-        do {
+        while(guess!=answer) {
             if (guess < answer) {
                 System.out.println("Ha, nice try - too low! Try again!");
                 System.out.print("Your guess: ");
@@ -27,14 +30,17 @@ public class GuessMeMore {
                 guess = Integer.parseInt(stringGuess);
                 System.out.println();
             } else if (guess > answer) {
-                System.out.println("Ha, nice try - too low! Try again!");
+                System.out.println("Ha, nice try - too high! Try again!");
                 System.out.print("Your guess: ");
                 stringGuess = sc.nextLine();
                 guess = Integer.parseInt(stringGuess);
                 System.out.println();
             }
-        } while (guess==answer);
+        }
 
         System.out.println("Wow, nice guess! That was it!");
+
+
+
     }
 }
