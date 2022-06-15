@@ -19,6 +19,6 @@ public class Scope {
 
         // NOT ok - outer block cannot access variables declared inside
         // inner blocks
-        System.out.println(yearsToWait);
+        System.out.println();
     }
 }
